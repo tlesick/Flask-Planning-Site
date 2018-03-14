@@ -1,0 +1,20 @@
+body {
+    text-align: center;
+    position: relative;
+    top: 300px;
+}
+
+.planner {
+    text-align: center;
+    border: 5px solid black;
+    border-radius: 10px;
+    display: inline-block;
+    width: 20vmax;
+    height: 15vmax;
+}
+
+input {
+    display: inline-block;
+    text-align: center;
+}
+

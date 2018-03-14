@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href= "{{ url_for('static', filename='view_task.css') }}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>View Task</title>
+</head>
+<body>
+    <a href="/homepage">Homepage</a>
+    <a href="/user/account">Account</a>
+    <h1>{{task.title}}</h1>
+
+    <label>Description:</label><p>{{task.description}}</p>
+
+    <label>Created:</label><p>{{task.created_at}}</p>
+    <label >Last Updated:</label><p>{{task.updated_at}}</p>
+    <label>Time Past From Creation</label><p>Hours: {{tcreated}}</p>
+    <label>Time Past From Last Update</label><p>Hours: {{tupdate}}</p>
+    
+</body>
+</html

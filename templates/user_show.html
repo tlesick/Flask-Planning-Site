@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href= "{{ url_for('static', filename='user_show.css') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Welcome {{user.first_name}}</title>
+</head>
+<body>
+    <a href="/homepage">Homepage</a>
+    <a href="/user/logout">Logout</a>
+    <p>* Required to Update</p>
+    
+    <form action="/user/update" method="POST">
+        <label for="first_name">First Name:</label>
+        <input type="text" name="first_name" placeholder="{{user.first_name}}">
+        <label for="last_name">Last Name:</label>
+        <input type="text" name="last_name" placeholder="{{user.last_name}}">
+        <label for="email">Email:</label>
+        <input type="email" name="email" placeholder="{{user.email}}">
+        <label for="new_password">New Password:</label>
+        <input type="password" name="new_password">
+        <label for="password_confirmation">New Password Confirmation:</label>
+        <input type="password" name="password_confirmation">
+
+        <label for="password">*Password</label>
+        <input type="password" name="password">
+        <input type="submit" name="Update">
+        
+
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+          <ul class=flashes>
+          
+          {% for message in messages %}
+          {% for i in message %}
+            <li>{{ i }}</li>
+            {% endfor %}
+          {% endfor %}
+          </ul>
+        {% endif %}
+      {% endwith %}
+      {% block body %}{% endblock %}
+
+</form>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href= "{{ url_for('static', filename='index.css') }}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Index</title>
+</head>
+<body>
+    <div class="planner">
+        <div class="inside">
+            <h1>Welcome to Planner</h1>
+            <form action="/login" method="POST" class="login">
+                <input type="email" name="email" placeholder="email" class="email">
+                <input type="password" name="password" placeholder="password" class="password">
+                <input type="submit" value="login">
+            </form>
+            <p>Not registered yet click <a href="/registration">Here</a></p>
+        </div>
+    </div>
+
+    {% if errors %}
+    {% for e in errors %}
+    <p>{{e}}</p>
+    {% endfor %}
+{% endif %}
+
+    
+    
+</body>
+</html>

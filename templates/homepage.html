@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href= "{{ url_for('static', filename='homepage.css') }}">
+    <title>Homepage</title>
+</head>
+<body>
+    <div class="headers">
+        <a href="/add_task">Create Task</a>
+        <a href="/user/account">Account</a>
+        <a href="/user/logout">Logout</a>
+    </div>
+<div class='tentative'>
+    <h4>Tentative Tasks</h4>
+    <table>
+        <tr class="table_top">
+            <th class="titles">Title</th>
+            <th class="actions">Actions</th>
+            <!-- subtasks need to be added, maybe get rid of the description -->
+        </tr>
+        {% for i in tentative %}
+        <tr class="tasks" id="tentative">
+            <td id="title">{{i.title}}</td>
+            <td>
+                <form action="/change_task/{{i.idtasks}}" method="POST">
+                    <select name="selected_task">
+                        <option value="completes">Complete</option>
+                        <option value="discards">Discard</option>
+                        <option value="processes">Process</option>
+                    </select>
+                    <input type="submit" value="Move">
+                </form>
+            </td>
+            <td>
+                <form action="/task/view/{{i.idtasks}}">
+                    <input type="submit" value="View">
+                </form>
+            </td>
+            <td>
+                <form action="/task/delete/{{i.idtasks}}" method="POST">
+                    <input type="submit" Value="Delete">
+                </form>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+<div class='process'>
+    <h4>Process Tasks</h4>
+    <table>
+        <tr class="table_top">
+            <th class="titles">Title</th>
+            <th class = "actions">Actions</th>
+            <!-- subtasks need to be added, maybe get rid of the description -->
+        </tr>
+        {% for i in process %}
+        <tr class="tasks" id="process">
+            <td>{{i.title}}</td>
+            <td>
+                <form action="/change_task/{{i.idtasks}}" method="POST">
+                    <select name="selected_task">
+                        <option value="completes">Complete</option>
+                        <option value="discards">Discard</option>
+                        <option value="tentatives">Tentative</option>
+                    </select>
+                    <input type="submit" value="Move">
+                </form>
+            </td>
+            <td>
+                <form action="/task/view/{{i.idtasks}}">
+                    <input type="submit" value="View">
+                </form>
+            </td>
+            <td>
+                <form action="/task/delete/{{i.idtasks}}" method="POST">
+                <input type="submit" Value="Delete">
+                </form>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+<div class='complete'>
+        <h4>Completed Tasks</h4>
+        <table>
+            <tr class="table_top">
+                <th class="titles">Title</th>
+                <th class = "actions">Actions</th>
+                <!-- subtasks need to be added, maybe get rid of the description -->
+            </tr>
+            {% for i in complete %}
+            <tr class="tasks" id="complete">
+                <td>{{i.title}}</td>
+                <td>
+                    <form action="/change_task/{{i.idtasks}}" method="POST">
+                        <select name="selected_task">
+                            <option value="discards">Discard</option>
+                            <option value="processes">Process</option>
+                            <option value="tentatives">Tentative</option>
+                        </select>
+                        <input type="submit" value="Move">
+                    </form>
+                </td>
+                <td>
+                    <form action="/task/view/{{i.idtasks}}">
+                        <input type="submit" value="View">
+                    </form>
+                </td>
+                <td>
+                    <form action="/task/delete/{{i.idtasks}}" method="POST">
+                        <input type="submit" Value="Delete">
+                    </form>
+                </td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+
+    <div class='discard'>
+            <h4>Discarded Tasks</h4>
+            <table>
+                <tr class="table_top">
+                    <th class="titles">Title</th>
+                    <th class = "actions">Actions</th>
+                    <!-- subtasks need to be added, maybe get rid of the description -->
+                </tr>
+                {% for i in discard %}
+                <tr class="tasks" id="discard">
+                    <td>{{i.title}}</td>
+                    <td><form action="/change_task/{{i.idtasks}}" method="POST">
+                            <select name="selected_task">
+                                <option value="completes">Complete</option>
+                                <option value="processes">Process</option>
+                                <option value="tentatives">Tentative</option>
+                            </select>
+                            <input type="submit" value="Move">
+                        </form>
+                    </td>
+                     <td>
+                        <form action="/task/view/{{i.idtasks}}">
+                             <input type="submit" value="View">
+                        </form>
+                    </td>
+                    <td>
+                        <form action="/task/delete/{{i.idtasks}}" method="POST">
+                            <input type="submit" Value="Delete">
+                        </form>
+                    </td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+</body>
+</html>

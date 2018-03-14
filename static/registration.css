@@ -1,0 +1,26 @@
+body {
+    text-align: center;
+    position: relative;
+    top: 300px;
+
+}
+
+.form {
+    text-align: center;
+    border: 5px solid black;
+    border-radius: 10px;
+    display: inline-block;
+    width: 20vmax;
+    height: 10vmax;
+    
+}
+
+
+.inputs {
+    text-align-last: center;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}

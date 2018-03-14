@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href= "{{ url_for('static', filename='registration.css') }}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Registration</title>
+</head>
+<body>
+    <div class="form">
+        <h4>Registration</h4>
+        <form action="/register" method="POST">
+            <div class="inputs">
+                <!-- <label for="first_name">First Name:</label> -->
+                <input type="text" name="first_name" placeholder="First Name">
+            </div>
+            <div class="inputs">
+                <!-- <label for="last_name">Last Name:</label> -->
+                <input type="text" name="last_name" placeholder="Last Name">
+            </div>
+            <div class="inputs">
+                <!-- <label for="email">Email</label> -->
+                <input type="email" name="email" placeholder="Email">
+            </div>
+            <div class="inputs">
+            <!-- <label for="password">Password:</label> -->
+            <input type="password" name="password" placeholder="Password">
+            </div>
+            <div class="inputs">
+            <!-- <label for="password_confrimation">Password Confirmation:</label> -->
+            <input type="password" name="password_confirmation" placeholder="Confirm Password">
+            </div>
+            <input type="submit">
+            <Button><a href="/">Go Back</a></Button>
+        </form>
+    </div>
+    {% if errors %}
+        {% for e in errors %}
+        <p>{{e}}</p>
+        {% endfor %}
+    {% endif %}
+    
+</body>
+</html>

@@ -1,0 +1,87 @@
+body {
+    background-color: #8cc6cc;
+    text-align: center;
+}
+.tentative {
+    text-align: center;
+    width: 23vmax;
+    display: inline-block;
+    border: 1px solid black;
+}
+
+
+.process {
+    text-align: center;
+    width: 23vmax;
+    display: inline-block;
+    border: 1px solid black;
+}
+h4 {
+    font-size: 25px;
+}
+
+
+.complete {
+    text-align: center;
+    width: 23vmax;
+    display: inline-block;
+    border: 1px solid black;
+}
+
+.discard {
+    text-align: center;
+    width: 23vmax;
+    display: inline-block;
+    border: 1px solid black;
+}
+.titles{
+    text-align: center;
+    text-align: center;
+    min-width: 13vmax;
+}
+
+
+
+.tasks {
+    
+    height: 5vmax;
+    border: 2px solid black;
+    max-height: 20vmax;
+}
+
+#title {
+    word-wrap: normal;
+}
+
+#tentative {
+    background-color: orange;
+}
+
+#process {
+    background-color: yellow;
+}
+
+#complete {
+    background-color: green
+}
+
+#discard {
+    background-color: red;
+}
+
+.headers {
+    background-color: #2944ce;
+    border-radius: 2px;
+    height: 3vmax;
+    text-align: center;
+    
+}
+
+a {
+    position: relative;
+    top: 20px;
+    font-size: 20px;
+    text-decoration: none;
+    margin: 10px;
+    color: black;
+}
