@@ -1,7 +1,8 @@
 body {
     text-align: center;
     position: relative;
-    top: 300px;
+    top: 200px;
+    background-color: #b3c1c1;
 }
 
 
@@ -11,13 +12,15 @@ body {
     border: 5px solid black;
     border-radius: 10px;
     display: inline-block;
-    width: 20vmax;
+    width: 25vmax;
     height: 15vmax;
 }
 
 
-.input {
-    text-align: left;
+#title-section{
+    position: relative;
+    right: 25px;
+    top: 5px;
 }
 
 

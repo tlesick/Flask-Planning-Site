@@ -8,12 +8,14 @@
     <title>New Task</title>
 </head>
 <body>
+    <h2>Create a New Task</h2>
     <div class="form">
         <form action="/task/create" method="POST">
-            <div class="input">
+            <div class="input" id="title-section">
                 <label for="title">Title:</label>
                 <input type="text" name="title" style="width:195px;" class="input">
             </div>
+            <br>
             <div class="input">
                 <label for="description">Description:</label>
                 <textarea name="description" cols="30" rows="10"></textarea>

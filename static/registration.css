@@ -2,6 +2,7 @@ body {
     text-align: center;
     position: relative;
     top: 300px;
+    background-size: cover;
 
 }
 
@@ -11,8 +12,7 @@ body {
     border-radius: 10px;
     display: inline-block;
     width: 20vmax;
-    height: 10vmax;
-    
+    height: 10%;
 }
 
 

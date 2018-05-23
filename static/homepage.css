@@ -1,45 +1,43 @@
 body {
-    background-color: #8cc6cc;
+    margin-top: 25px;
+    background-color: #b3c0c1;
     text-align: center;
+}
+
+.wrapper {
+    height: 100%;
+    width: 1300px;
+    display: inline-block;
+    border: 1px solid black;
 }
 .tentative {
-    text-align: center;
-    width: 23vmax;
+    width: 20%;
     display: inline-block;
-    border: 1px solid black;
+    margin-right: 5px;
+}
+.process{
+    width: 20%;
+    display: inline-block;
+    margin-right: 5px;
+
+}
+.complete{
+    width: 20%;
+    display: inline-block;
+    margin-right: 5px;
+}
+.discard{
+    width: 20%;
+    display: inline-block;
+    margin-right: 5px;
 }
 
 
-.process {
-    text-align: center;
-    width: 23vmax;
-    display: inline-block;
-    border: 1px solid black;
-}
+
+
 h4 {
     font-size: 25px;
 }
-
-
-.complete {
-    text-align: center;
-    width: 23vmax;
-    display: inline-block;
-    border: 1px solid black;
-}
-
-.discard {
-    text-align: center;
-    width: 23vmax;
-    display: inline-block;
-    border: 1px solid black;
-}
-.titles{
-    text-align: center;
-    text-align: center;
-    min-width: 13vmax;
-}
-
 
 
 .tasks {
@@ -49,31 +47,13 @@ h4 {
     max-height: 20vmax;
 }
 
-#title {
-    word-wrap: normal;
-}
-
-#tentative {
-    background-color: orange;
-}
-
-#process {
-    background-color: yellow;
-}
-
-#complete {
-    background-color: green
-}
-
-#discard {
-    background-color: red;
-}
 
 .headers {
-    background-color: #2944ce;
+    background-color: #b6bdbf;
     border-radius: 2px;
     height: 3vmax;
     text-align: center;
+    
     
 }
 
@@ -84,4 +64,7 @@ a {
     text-decoration: none;
     margin: 10px;
     color: black;
+}
+.nav-bar{
+    color: #ffff;
 }

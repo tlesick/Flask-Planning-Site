@@ -248,13 +248,18 @@ def update():
     else:
         return redirect('/user/account')
 
+
+
 @app.route('/task/delete/<task>', methods=['POST'])
 def delete_task(task):
     user_id = session['user_id']
+    print (user_id)
+    print (task)
     query = "DELETE FROM tasks WHERE idtasks = :task AND users_idusers = :user"
     data = {
         'task':task,
         'user':user_id,
     }
+    delete = mysql.query_db(query, data)
     return redirect('/homepage')
 app.run(debug=True)

@@ -8,14 +8,16 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Index</title>
 </head>
-<body>
+<body background="{{url_for('static', filename='cal-back.jpg')}}">
     <div class="planner">
         <div class="inside">
-            <h1>Welcome to Planner</h1>
+            <h1>Welcome to Calendarize</h1>
             <form action="/login" method="POST" class="login">
                 <input type="email" name="email" placeholder="email" class="email">
+                
                 <input type="password" name="password" placeholder="password" class="password">
-                <input type="submit" value="login">
+                <br> 
+                <input type="submit" value="login" class="lgn-btn">
             </form>
             <p>Not registered yet click <a href="/registration">Here</a></p>
         </div>

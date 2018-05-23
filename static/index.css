@@ -2,9 +2,11 @@ body {
     text-align: center;
     position: relative;
     top: 300px;
+    background-size: cover;
 }
 
 .planner {
+
     text-align: center;
     border: 5px solid black;
     border-radius: 10px;
@@ -17,4 +19,7 @@ input {
     display: inline-block;
     text-align: center;
 }
-
+.lgn-btn{
+    border-radius: 5px;
+    
+}

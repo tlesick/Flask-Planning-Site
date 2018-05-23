@@ -12,11 +12,12 @@
     <title>Homepage</title>
 </head>
 <body>
-    <div class="headers">
-        <a href="/add_task">Create Task</a>
-        <a href="/user/account">Account</a>
-        <a href="/user/logout">Logout</a>
-    </div>
+<div class="wrapper">
+<div class="headers">
+        <a href="/add_task" class="nav-bar">Create Task</a>
+        <a href="/user/account" class="nav-bar">Account</a>
+        <a href="/user/logout" class="nav-bar">Logout</a>
+</div>
 <div class='tentative'>
     <h4>Tentative Tasks</h4>
     <table>
@@ -157,5 +158,6 @@
                 {% endfor %}
             </table>
         </div>
+</div>
 </body>
 </html>

@@ -1,0 +1,60 @@
+.wrapper {
+    width: 100%;
+    height: 1000px;
+    text-align: center;
+    display: inline-block;
+    background-color: #b3c0c1;    
+}
+
+.form-section{
+    display: inline-block;
+    height: 350px;
+    border: 1px solid black;
+    width: 30%;
+    position: relative;
+    top: 150px;
+    border-radius: 5px;
+}
+
+.entry-form{
+    height: 80%;
+    
+    
+}
+
+.header {
+    height: 7%;
+    background-color: gray;
+}
+
+.input {
+    margin-left: 10px;
+    text-align: left;
+    
+}
+
+.required{
+    text-align: left;
+}
+
+.left {
+    width: 50%;
+    float: left;
+}
+
+.right{
+    width: 50%;
+    float: right;
+}
+
+.btn{
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.nav-btn {
+    color: black; 
+    position: relative;
+    
+    
+}
